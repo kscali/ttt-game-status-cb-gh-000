@@ -17,14 +17,11 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.each do |win_combo|
-    win_combo.each do |value|
-      value.all? do |symbol|
-        if symbol == "X" || symbol == "O"
-          return win_combo  
-        else
-          false
-        end
-      end  
+    win_combo.all?{|value| value == "X" || value =="O"
+        return win_combo  
+    if win_combo.include?("X", "O")  
+      return nil
+    end
     end  
   end
 end  
