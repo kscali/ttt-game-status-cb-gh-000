@@ -48,11 +48,4 @@ def over?(board)
 end  
 
 
-def winner(board)
-  WIN_COMBINATIONS.each do |win_combo|
-    if win_combo.all?{|value| value == "X"}
-      return "X"
-    elsif win_combo.all?{|value| value == "O"}
-      return "O"
-  end
-end  
+
