@@ -22,9 +22,9 @@ def won?(board)
     if win_combo.include?("X", "O")  
       return nil
     end
-    end  
-  end
-end  
+  end  
+end
+
 
 
 
