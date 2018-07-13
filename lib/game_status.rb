@@ -32,10 +32,10 @@ end
 
 def full?(board)
   WIN_COMBINATIONS.each do |win_combo|
-    if  win_combo.include?(" ")
-      return false
+  if  win_combo.include?("X")  || win_combo.include?("O")
+      return true
     else
-      return true 
+      return false
     end  
 end
 
