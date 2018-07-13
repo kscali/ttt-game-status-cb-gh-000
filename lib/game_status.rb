@@ -15,18 +15,7 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 
-def won?(board)
-  WIN_COMBINATIONS.each do |win_combo|
-    win_combo.each do |value|
-    if value.all? == "X" || value.all? == "O"
-        return win_combo  
-    if win_combo.include?("X", "O")  
-      return nil
-    elsif win_combo.all?{|value| value == " "}
-      return nil
-    end
-  end  
-end
+
 
 
 
