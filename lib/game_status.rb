@@ -30,7 +30,7 @@ end
 
 def full?(board)
   position_taken(board, index).all? do |value2|
-    if value2 !== " "
+    if value2 != " "
       return true 
     else
       return false 
