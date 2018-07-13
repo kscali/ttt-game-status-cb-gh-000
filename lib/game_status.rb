@@ -21,7 +21,7 @@ def won?(board)
         return win_combo  
     if win_combo.include?("X", "O")  
       return nil
-    elsif win_combo.all?{|value| value == " "
+    elsif win_combo.all?{|value| value == " "}
       return nil
     end
   end  
