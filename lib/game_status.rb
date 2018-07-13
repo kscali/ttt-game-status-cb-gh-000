@@ -32,11 +32,10 @@ end
 
 
 def full?(board)
-  WIN_COMBINATIONS.each do |win_combo|
-  if  win_combo.include?("X")  || win_combo.include?("O")
-      return true
-    else
-      return false
+  if position_taken(board, index) == false
+    return false
+  else
+    return true
     end  
 end
 
