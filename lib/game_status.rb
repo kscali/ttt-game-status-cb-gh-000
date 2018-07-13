@@ -31,13 +31,12 @@ end
 
 
 def full?(board)
-  position_taken(board, index).all? do |value2|
-    if value2 != " "
-      return true 
+  WIN_COMBINATIONS.each do |win_combo|
+    if  win_combo.include?(" ")
+      return false
     else
-      return false 
-    end
-  end  
+      return true 
+    end  
 end
 
 
@@ -51,7 +50,8 @@ end
 
 
 def over?(board)
-  if won?(board) == true || draw?(board) == true || full?(board) == true
+  if won?(board) == true || draw?(board) == true || 
+    full?(board) == true
     return true
   end
 end  
